@@ -1,0 +1,78 @@
+/* 头部模块 */
+
+.logo {
+    margin-left: 250px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    margin-right: 85px;
+    background-color: red;
+}
+
+.search {
+    position: relative;
+    left: 425px;
+    top: 25px;
+    width: 600px;
+    height: 36px;
+    border: 2px solid #b1191a;
+}
+
+.search input {
+    display: inline-block;
+    position: relative;
+    top: -14px;
+    width: 517px;
+    height: 36px;
+}
+
+.search button {
+    width: 75px;
+    height: 36px;
+    background-color: #b1191a;
+    font-size: 16px;
+    color: #fff;
+}
+
+.hotwords {
+    position: relative;
+    top: 30px;
+    left: 400px;
+    height: 50px;
+    width: 800px;
+}
+
+.hotwords a {
+    margin: 10px;
+}
+
+.branch {
+    display: inline-block;
+    font-size: 18px;
+    position: relative;
+    left: 400px;
+}
+
+.shopcar {
+    display: inline-block;
+    position: absolute;
+    top: 55px;
+    right: 350px;
+    bottom: 100px;
+    width: 140px;
+    height: 35px;
+    line-height: 35px;
+    text-align: center;
+    border: 1px solid #dfdfdf;
+    background-color: #f7f7f7;
+}
+
+.count {
+    position: absolute;
+    left: 30px;
+    height: 14px;
+    line-height: 14px;
+    color: #fff;
+    background-color: #e60012;
+    padding: 0 5px;
+    border-radius: 7px 7px 7px 0;
+}
