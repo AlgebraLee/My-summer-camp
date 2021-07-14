@@ -1,0 +1,82 @@
+/* 框架制作 */
+
+#shortcut {
+    border-bottom: 1px solid #ddd;
+    background-color: #e3e4e5;
+}
+
+#header {
+    position: relative;
+    background: #fff;
+    border-bottom: 1px solid #ddd;
+    height: 140px;
+}
+
+#main {
+    height: 480px;
+    margin-top: 14px;
+    margin-bottom: 30px;
+}
+
+#section {
+    background-color: #e3e4e5;
+    height: 2500px;
+    width: 1190px;
+    margin: 0 auto;
+}
+
+body {
+    -webkit-font-smoothing: antialiased;
+    background-color: #f4f4f4;
+    font: 12px/1.5 Microsoft YaHei, Heiti SC, tahoma, arial, Hiragino Sans GB, "\5B8B\4F53", sans-serif;
+    color: #666;
+}
+
+.w {
+    margin: auto;
+    width: 1190px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+em,
+i {
+    font-style: normal
+}
+
+img {
+    border: 0;
+    vertical-align: middle;
+}
+
+li {
+    list-style: normal;
+    display: inline;
+}
+
+button {
+    cursor: pointer
+}
+
+a {
+    color: #666;
+    text-decoration: none
+}
+
+a:hover {
+    color: #c81623;
+}
+
+.style_red {
+    font-weight: 700;
+    color: #e1251b;
+}
+
+button,
+input {
+    border: 0;
+    outline: none;
+}
