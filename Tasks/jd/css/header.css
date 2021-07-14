@@ -1,0 +1,91 @@
+/* 顶部模块 */
+
+#shortcut .w {
+    height: 30px;
+    line-height: 30px;
+    color: #999;
+}
+
+.fl {
+    float: left;
+}
+
+.fr {
+    float: right;
+}
+
+
+/* 头部模块 */
+
+#header .w {
+    height: 140px;
+    position: relative;
+}
+
+.header-c1 {
+    position: relative;
+    height: 60px;
+}
+
+.search {
+    position: relative;
+    left: 220px;
+    top: 25px;
+    width: 486px;
+    height: 36px;
+    border: 2px solid #b1191a;
+}
+
+.search input {
+    display: inline-block;
+    position: absolute;
+    width: 425px;
+    height: 36px;
+}
+
+.search button {
+    position: absolute;
+    right: 0;
+    width: 60px;
+    height: 36px;
+    background-color: #b1191a;
+}
+
+.shopcar {
+    position: absolute;
+    top: 25px;
+    right: 300px;
+    bottom: 100px;
+    width: 140px;
+    height: 35px;
+    line-height: 35px;
+    text-align: center;
+    border: 1px solid #dfdfdf;
+    background-color: #f7f7f7;
+}
+
+.count {
+    position: absolute;
+    left: 30px;
+    height: 14px;
+    line-height: 14px;
+    color: #fff;
+    background-color: #e60012;
+    padding: 0 5px;
+    border-radius: 7px 7px 7px 0;
+}
+
+.hotwords {
+    position: absolute;
+    top: 80px;
+    height: 50px;
+    left: 200px;
+    width: 500px;
+}
+
+.navitems {
+    position: relative;
+    top: 50px;
+    left: 200px;
+    font-size: 15px;
+}
