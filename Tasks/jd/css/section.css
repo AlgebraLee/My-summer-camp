@@ -1,0 +1,34 @@
+.killitems {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 1190px;
+}
+
+.killitems>div {
+    height: 250px;
+}
+
+.killitems div img {
+    width: 100%;
+    height: 100%;
+}
+
+.channel {
+    display: grid;
+    position: relative;
+    top: 30px;
+    grid-template-columns: auto auto auto auto;
+    background-color: #2196F3;
+    padding: 10px;
+}
+
+.channel>div {
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 1px solid rgba(0, 0, 0, 0.8);
+    height: 100px;
+    margin-top: 20px;
+    padding: 20px;
+    font-size: 30px;
+    text-align: center;
+}
