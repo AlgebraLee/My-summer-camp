@@ -1,0 +1,59 @@
+#main .w {
+    position: relative;
+    height: 480px;
+    width: 1190px;
+}
+
+.main-c1 {
+    float: left;
+    width: 190px;
+    height: 480px;
+    background-color: #fff;
+}
+
+.main-c1 li {
+    float: left;
+    font-size: 14px;
+    line-height: 26px;
+    padding-left: 14px;
+    display: list-item;
+    text-align: left;
+    list-style: normal;
+    display: inline;
+}
+
+.main-c2 {
+    display: inline-block;
+    width: 400px;
+}
+
+.promo {
+    display: inline-block;
+    margin-left: 20px;
+    left: 375px;
+    width: 600px;
+    height: 480px;
+    background-color: pink;
+}
+
+.main-c3 {
+    position: relative;
+    float: right;
+    width: 350px;
+    height: 480px;
+    background-color: pink;
+}
+
+.drop-content {
+    display: none;
+    position: absolute;
+    background-color: yellow;
+    left: 200px;
+    height: 500px;
+    width: 800px;
+    z-index: 2;
+}
+
+.main-c1:hover .drop-content {
+    display: inline-block;
+}
