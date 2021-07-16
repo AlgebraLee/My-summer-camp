@@ -19,27 +19,27 @@
 }
 
 #section {
-    background-color: #e3e4e5;
-    height: 2500px;
-    width: 1190px;
+    height: 1200px;
     margin: 0 auto;
 }
 
 body {
     -webkit-font-smoothing: antialiased;
-    background-color: #f4f4f4;
+    background-color: #d9d9d9;
     font: 12px/1.5 Microsoft YaHei, Heiti SC, tahoma, arial, Hiragino Sans GB, "\5B8B\4F53", sans-serif;
     color: #666;
 }
 
 .w {
-    margin: auto;
+    margin: 0 auto;
+    overflow: hidden;
     width: 1190px;
 }
 
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 em,
