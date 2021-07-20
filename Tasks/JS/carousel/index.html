@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carousel</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="index.css">
+    <!-- JS -->
+    <link rel="stylesheet" href="index.js">
+</head>
+<body>
+    <div class="box">
+        <div class="list">
+            <ul>
+                <li class="p7"><a href=""><img src="https://github.com/AlgebraLi/webProject/blob/master/Images/3DchangImg/img/77.jpg?raw=true" alt=""></a></li>
+                <li class="p6"><a href=""><img src="https://github.com/AlgebraLi/webProject/blob/master/Images/3DchangImg/img/66.jpg?raw=true" alt=""></a></li>
+                <li class="p5"><a href=""><img src="https://github.com/AlgebraLi/webProject/blob/master/Images/3DchangImg/img/55.jpg?raw=true" ></a></li>
+                <li class="p4"><a href=""><img src="https://github.com/AlgebraLi/webProject/blob/master/Images/3DchangImg/img/44.jpg?raw=true" ></a></li>
+                <li class="p3"><a href=""><img src="https://github.com/AlgebraLi/webProject/blob/master/Images/3DchangImg/img/3.png?raw=true" ></a></li>
+                <li class="p2"><a href=""><img src="https://github.com/AlgebraLi/webProject/blob/master/Images/3DchangImg/img/2.png?raw=true" ></a></li>
+                <li class="p1"><a href=""><img src="https://github.com/AlgebraLi/webProject/blob/master/Images/3DchangImg/img/1.png?raw=true" ></a></li>
+            </ul>
+        </div>
+        <a href="" class="prev btn"></a>
+        <a href="" class="next btn"></a>
+        <div class="buttons">
+            <a href=""><span class="blue"></span></a>
+            <a href=""><span></span></a>
+            <a href=""><span></span></a>
+            <a href=""><span></span></a>
+            <a href=""><span></span></a>
+        </div>
+    </div>
+    <script></script>
+    <script>
+        var $a=$(".buttons a");
+        var $s=$(".buttons span");
+        var cArr=["p5","p4","p3","p2","p1"];
+        var index=0;
+        $(".next").click(
+            function(){
+                nextimg;
+            }
+        )
+        $(".prev").click(
+            function(){
+                previmg;
+            }
+        )
+        //上一张
+        function previmg(){
+            cArr.unshift(cArr[6]);
+            cArr.pop();
+            $("li").each(function(i,e){
+                $(e).removeClass().addClass(cArr[i]);
+            })
+            index--;
+            if(index<0){
+                index=6;
+            }
+            show();
+        }
+        //下一张
+        function nextimg(){
+            cArr.unshift(cArr[6]);
+            cArr.pop();
+            $("li").each(function(i,e){
+                $(e).removeClass().addClass(cArr[i]);
+            })
+            index++;
+            if(index>6){
+                index=0;
+            }
+            show();
+        }
+        //通过按钮点击切换
+        $a.each(function(){
+            var myindex=$(this).index();
+            var b=myindex-index;
+            if(b==0){
+                return ;
+            }
+            else if(b>0){
+                var newarr=cArr.splice(0,b);
+				cArr=$.merge(cArr,newarr);
+				$("li").each(function(i,e){
+				$(e).removeClass().addClass(cArr[i]);
+				})
+				index=myindex;
+				show();
+            }
+            else if(b<0){
+                cArr.reverse();
+				var oldarr=cArr.splice(0,-b)
+				cArr=$.merge(cArr,oldarr);
+				cArr.reverse();
+				$("li").each(function(i,e){
+				$(e).removeClass().addClass(cArr[i]);
+				})
+				index=myindex;
+				show();
+            }
+        })
+        //改变底下按钮的背景色
+	function show(){
+			$($s).eq(index).addClass("blue").parent().siblings().children().removeClass("blue");
+	}
+
+	//点击class为p2的元素触发上一张照片的函数
+	$(document).on("click",".p2",function(){
+		previmg();
+		return false;//返回一个false值，让a标签不跳转
+	});
+
+	//点击class为p4的元素触发下一张照片的函数
+	$(document).on("click",".p4",function(){
+		nextimg();
+		return false;
+	});
+
+	//鼠标移入box时清除定时器
+	$(".box").mouseover(function(){
+		clearInterval(timer);
+	})
+
+	//鼠标移出box时开始定时器
+	$(".box").mouseleave(function(){
+		timer=setInterval(nextimg,4000);
+	})
+
+	//进入页面自动开始定时器
+	timer=setInterval(nextimg,4000);
+    </script>
+</body>
+</html>
