@@ -1,0 +1,75 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+#nav {
+    width: 100%;
+    height: 50px;
+    background-color: #333;
+}
+
+#nav ul {
+    width: 990px;
+    margin: 0 auto;
+}
+
+#nav ul li {
+    float: left;
+    list-style: none;
+}
+
+#nav ul li a {
+    font-size: 16px;
+    height: 50px;
+    color: #fff;
+    padding: 0 30px;
+    line-height: 50px;
+    text-decoration: none;
+    display: inline-block;
+}
+
+#nav ul li a:hover {
+    background-color: #666;
+}
+
+#clothes {
+    height: 600px;
+    background: #bbb;
+    font-weight: bold;
+    text-align: center;
+    line-height: 400px;
+}
+
+#shoes {
+    height: 600px;
+    background: #aaa;
+    font-weight: bold;
+    text-align: center;
+    line-height: 400px;
+}
+
+#toys {
+    height: 600px;
+    background: #999;
+    font-weight: bold;
+    text-align: center;
+    line-height: 400px;
+}
+
+.fixed {
+    position: fixed;
+    margin: 0 auto;
+    animation-name: show;
+    animation-duration: 0.5s;
+}
+
+@keyframes show {
+    from {
+        top: -50px;
+    }
+
+    to {
+        top: 0;
+    }
+}
